@@ -16,6 +16,7 @@
 
 package cpd3314.assign9;
 
+import java.util.Random;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -39,6 +40,18 @@ public class CPD3314Assign9Test {
         String result = CPD3314Assign9.reverseString(str);
         assertEquals(expResult, result);
     }
+    
+    /**
+     * Test of reverseString method, of class CPD3314Assign9.
+     */
+    @Test
+    public void testPalindrome() {
+        System.out.println("reverseRacecar");
+        String str = "racecar";
+        String expResult = "racecar";
+        String result = CPD3314Assign9.reverseString(str);
+        assertEquals(expResult, result);
+    }
 
     /**
      * Test of wordCount method, of class CPD3314Assign9.
@@ -51,6 +64,22 @@ public class CPD3314Assign9Test {
         int result = CPD3314Assign9.wordCount(str);
         assertEquals(expResult, result);
     }
+    
+    /**
+     * Test of wordCount method, of class CPD3314Assign9.
+     */
+    @Test
+    public void testWordCountRanomd() {
+        System.out.println("wordCountRandom");
+        int count = new Random().nextInt(100);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < count; i++)
+            sb.append("word ");
+        sb.append(".");
+        int expResult = count;
+        int result = CPD3314Assign9.wordCount(sb.toString());
+        assertEquals(expResult, result);
+    }
 
     /**
      * Test of capitalize method, of class CPD3314Assign9.
@@ -59,6 +88,32 @@ public class CPD3314Assign9Test {
     public void testCapitalize() {
         System.out.println("capitalize");
         String str = "this is. SOME SORT. of lengthy. SAMPLE string.";
+        String expResult = "This is. Some sort. Of lengthy. Sample string.";
+        String result = CPD3314Assign9.capitalize(str);
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of capitalize method, of class CPD3314Assign9.
+     */
+    
+    @Test
+    public void testCapitalizeAllLower() {
+        System.out.println("capitalizeAllLower");
+        String str = "this is. SOME SORT. of lengthy. SAMPLE string.".toLowerCase();
+        String expResult = "This is. Some sort. Of lengthy. Sample string.";
+        String result = CPD3314Assign9.capitalize(str);
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of capitalize method, of class CPD3314Assign9.
+     */
+    
+    @Test
+    public void testCapitalizeAllUpper() {
+        System.out.println("capitalizeAllUpper");
+        String str = "this is. SOME SORT. of lengthy. SAMPLE string.".toUpperCase();
         String expResult = "This is. Some sort. Of lengthy. Sample string.";
         String result = CPD3314Assign9.capitalize(str);
         assertEquals(expResult, result);

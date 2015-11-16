@@ -69,7 +69,7 @@ public class CPD3314Assign9 {
         return "";
     }
     
-    /* Exercise #9 - Sum of Digits in a String
+    /* Exercise #4 - Sum of Digits in a String
      * =======================================
      * Complete the following method, sumOfDigits(String str) so that it returns
      * the sum of all digits present in a string. If a character is not a digit,
@@ -80,7 +80,7 @@ public class CPD3314Assign9 {
         return 0;
     }
     
-    /* Exercise 13 - Alphabetic Telephone Number Translator
+    /* Exercise #5 - Alphabetic Telephone Number Translator
      * ====================================================
      * Many companies use telephone numbers like 555-GET-FOOD so the number is 
      * easier for their customers to remember. On a standard telephone, the 
